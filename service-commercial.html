@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commercial | Martin Construction</title>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+            colors: { stone: { 850: '#1c1917', 950: '#0c0a09' }, bronze: { 500: '#a18058', 600: '#8c6b46' } },
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased selection:bg-bronze-500 selection:text-white flex flex-col min-h-screen">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 flex flex-col transition-all duration-300 shadow-md bg-white text-stone-900">
+        <div class="w-full transition-all duration-300 py-4 lg:py-5">
+            <div class="container mx-auto px-4 lg:px-12 flex items-center justify-between">
+                <a href="index.html" class="group relative z-50 flex-shrink-0">
+                    <div class="flex flex-col items-start leading-none">
+                        <span class="font-serif text-3xl lg:text-4xl font-bold tracking-tight text-stone-900">MARTIN</span>
+                        <span class="text-[10px] lg:text-xs tracking-[0.3em] uppercase font-sans font-medium mt-1 text-bronze-600">Construction</span>
+                    </div>
+                </a>
+                <nav class="hidden xl:flex items-center gap-8 h-full">
+                    <a href="index.html" class="text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600 transition-colors">About Us</a>
+                    <div class="relative h-full flex items-center group/dropdown">
+                        <button class="text-sm uppercase tracking-widest font-bold relative py-2 text-stone-950 hover:text-bronze-600 flex items-center gap-1 bg-transparent border-none cursor-pointer transition-colors">
+                            Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover/dropdown:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[280px] invisible opacity-0 translate-y-2 group-hover/dropdown:visible group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div class="bg-white shadow-2xl border-t-4 border-bronze-600 rounded-b-sm flex flex-col">
+                                <a href="service-new-construction.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">New Construction</a>
+                                <a href="service-basement.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Basement Remodeling</a>
+                                <a href="service-insurance.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Insurance Restoration</a>
+                                <a href="service-kitchen.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Kitchen Remodeling</a>
+                                <a href="service-bath.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Bathroom Remodeling</a>
+                                <a href="service-structural.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Structural Repairs</a>
+                                <a href="service-commercial.html" class="block px-6 py-3 hover:bg-stone-50 text-stone-800 text-sm font-medium transition-colors border-b border-stone-100 last:border-0">Commercial Contracting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="portfolio.html" class="text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-sm uppercase tracking-widest font-bold relative group py-2 text-stone-950 hover:text-bronze-600 transition-colors">Blog</a>
+                </nav>
+                <div class="hidden xl:flex items-center gap-6">
+                    <a href="tel:7205840716" class="font-sans text-lg font-bold text-stone-900 hover:text-bronze-600 transition-colors tracking-tight">720-584-0716</a>
+                    <a href="contact.html" class="px-6 py-3 bg-bronze-600 text-white text-sm uppercase tracking-widest font-bold hover:bg-stone-900 transition-colors rounded-sm shadow-md flex items-center gap-2">Book Now</a>
+                </div>
+                <div class="xl:hidden flex items-center gap-4">
+                    <a href="tel:7205840716" class="p-2 bg-bronze-600 text-white rounded-full shadow-md"><i data-lucide="phone" class="w-5 h-5"></i></a>
+                    <button id="mobile-toggle" class="p-2 text-stone-900 hover:text-bronze-600 transition-colors"><i data-lucide="menu" class="w-8 h-8"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center overflow-y-auto">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 p-2 text-stone-900 hover:text-bronze-600"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <nav class="flex flex-col items-center gap-6 text-center w-full px-6 py-10">
+                <a href="index.html" class="font-serif text-3xl text-stone-900 hover:text-bronze-600">Home</a>
+                <a href="about.html" class="font-serif text-3xl text-stone-900 hover:text-bronze-600">About Us</a>
+                <div class="w-full max-w-xs flex flex-col gap-3 bg-stone-50 p-6 rounded-lg border border-stone-100">
+                    <span class="text-sm font-bold uppercase text-bronze-600 mb-2 tracking-widest">Services</span>
+                    <a href="service-new-construction.html" class="text-stone-600 hover:text-stone-900 font-medium">New Construction</a>
+                    <a href="service-basement.html" class="text-stone-600 hover:text-stone-900 font-medium">Basement</a>
+                    <a href="service-insurance.html" class="text-stone-600 hover:text-stone-900 font-medium">Insurance Restoration</a>
+                    <a href="service-kitchen.html" class="text-stone-600 hover:text-stone-900 font-medium">Kitchen</a>
+                    <a href="service-bath.html" class="text-stone-600 hover:text-stone-900 font-medium">Bathroom</a>
+                    <a href="service-structural.html" class="text-stone-600 hover:text-stone-900 font-medium">Structural</a>
+                    <a href="service-commercial.html" class="text-stone-600 hover:text-stone-900 font-medium">Commercial</a>
+                </div>
+                <a href="portfolio.html" class="font-serif text-3xl text-stone-900 hover:text-bronze-600">Portfolio</a>
+                <a href="contact.html" class="mt-4 px-10 py-4 bg-stone-900 text-white uppercase tracking-widest font-bold hover:bg-bronze-600 transition-colors w-full max-w-xs">Book Appointment</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <section class="relative h-[60vh] min-h-[500px] mb-20 mt-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2070&q=80" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50 flex items-center justify-center relative z-10">
+                <div class="text-center text-white p-6">
+                    <span class="text-bronze-500 text-sm font-bold uppercase tracking-widest mb-4 block">Services</span>
+                    <h1 class="font-serif text-5xl md:text-7xl">Commercial Contracting</h1>
+                </div>
+            </div>
+        </section>
+        <div class="container mx-auto px-6 lg:px-12 text-center pb-20">
+            <h2 class="font-serif text-4xl mb-6">Business Built on Deadlines</h2>
+            <p class="text-lg text-stone-600 mb-8 max-w-3xl mx-auto">In commercial construction, time is money. We specialize in tenant improvements, office build-outs, and retail renovations. Our streamlined project management ensures we hit your opening date without compromising on the Martin Standard of quality.</p>
+            <a href="contact.html" class="inline-block bg-stone-900 text-white px-8 py-4 uppercase tracking-widest text-xs font-bold hover:bg-bronze-600 transition-colors cursor-pointer">Get Quote</a>
+        </div>
+    </main>
+
+    <footer class="bg-stone-950 text-stone-400 py-16 border-t border-stone-900 font-sans">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="space-y-12">
+                    <div>
+                        <div class="flex flex-col items-start leading-none mb-6">
+                            <span class="font-serif text-3xl font-bold tracking-tight text-white">MARTIN</span>
+                            <span class="text-[10px] tracking-[0.3em] uppercase font-sans font-medium mt-1 text-bronze-500">Construction</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-6 font-light max-w-md">Locally owned Class B General Contractors serving Denver & Englewood. Dedicated to quality craftsmanship, integrity, and transparent project management.</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="p-2 bg-stone-900 hover:bg-bronze-600 hover:text-white transition-colors rounded-full text-stone-400"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                            <a href="#" class="p-2 bg-stone-900 hover:bg-bronze-600 hover:text-white transition-colors rounded-full text-stone-400"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xs font-bold text-white uppercase tracking-widest mb-6">Quick Links</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li><a href="index.html" class="hover:text-bronze-500 transition-colors">Home</a></li>
+                                <li><a href="about.html" class="hover:text-bronze-500 transition-colors">About Us</a></li>
+                                <li><a href="portfolio.html" class="hover:text-bronze-500 transition-colors">Portfolio</a></li>
+                                <li><a href="blog.html" class="hover:text-bronze-500 transition-colors">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-bold text-white uppercase tracking-widest mb-6">Contact Info</h3>
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-bronze-500 shrink-0"></i><span>Denver, CO & Surrounding Areas</span></li>
+                                <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-bronze-500 shrink-0"></i><a href="tel:7205840716" class="hover:text-white transition-colors font-sans font-bold tracking-tight">720-584-0716</a></li>
+                                <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-bronze-500 shrink-0"></i><a href="mailto:martinconstructionservice5280@gmail.com" class="hover:text-white transition-colors break-all">martinconstructionservice5280@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-stone-900 p-8 rounded-sm border border-stone-800">
+                    <h3 class="font-serif text-2xl text-white mb-2">Request an Estimate</h3>
+                    <p class="text-xs text-stone-500 uppercase tracking-widest mb-6">We'll get back to you within 24 hours.</p>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="3e696060-6ade-46dd-93a1-590db5823748">
+                        <input type="hidden" name="subject" value="New Footer Contact Inquiry">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Name" required class="w-full bg-stone-950 border border-stone-800 text-white p-3 text-sm focus:outline-none focus:border-bronze-600 transition-colors">
+                            <input type="tel" name="phone" placeholder="Phone" required class="w-full bg-stone-900 border border-stone-800 text-white p-3 text-sm focus:outline-none focus:border-bronze-600 transition-colors">
+                        </div>
+                        <select name="service" class="w-full bg-stone-950 border border-stone-800 text-stone-400 p-3 text-sm focus:outline-none focus:border-bronze-600 transition-colors">
+                            <option>Service Interested In...</option>
+                            <option>Insurance Restoration</option>
+                            <option>Kitchen Remodel</option>
+                            <option>Bath Remodel</option>
+                            <option>New Construction</option>
+                            <option>Structural Repairs</option>
+                            <option>Basement Remodeling</option>
+                            <option>Commercial</option>
+                            <option>Other</option>
+                        </select>
+                        <textarea name="message" rows="3" placeholder="How can we help?" class="w-full bg-stone-950 border border-stone-800 text-white p-3 text-sm focus:outline-none focus:border-bronze-600 transition-colors"></textarea>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit" class="w-full bg-bronze-600 text-white py-3 uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-stone-900 transition-colors cursor-pointer">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-stone-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-600 uppercase tracking-widest">
+                <p>&copy; 2025 Martin Construction. All Rights Reserved.</p>
+                <div class="flex gap-6"><a href="#" class="hover:text-stone-400 transition-colors">Privacy Policy</a><a href="#" class="hover:text-stone-400 transition-colors">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            document.body.classList.toggle('overflow-hidden');
+        }
+        mobileToggle.addEventListener('click', toggleMenu);
+        closeMobileMenu.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
